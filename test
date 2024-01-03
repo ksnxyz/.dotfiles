@@ -1,3 +1,15 @@
-# Toggle between floating and tiling mode for the focused window
-alt + t
-    bspc node -t $(bspc query -N -n focused.floating | grep -q true && echo tiled || echo floating)
+# Focus window to the left
+alt + {_,shift + }Left
+    bspc node -f prev.local.!hidden.window
+
+# Focus window to the right
+alt + {_,shift + }Right
+    bspc node -f next.local.!hidden.window
+
+# Focus window above
+alt + {_,shift + }Up
+    bspc node -f north.local.!hidden.window
+
+# Focus window below
+alt + {_,shift + }Down
+    bspc node -f south.local.!hidden.window
