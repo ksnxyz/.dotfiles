@@ -1,15 +1,7 @@
-# Focus window to the left
-alt + Left
-    bspc node -f west.local.!hidden.window
+#!/usr/bin/bash
 
-# Focus window to the right
-alt + Right
-    bspc node -f east.local.!hidden.window
+ss=/home/doden/Pictures/Screenshots/`date "+%F_%H%M%S.jpg"`
 
-# Focus window above
-alt + Up
-    bspc node -f north.local.!hidden.window
-
-# Focus window below
-alt + Down
-    bspc node -f south.local.!hidden.window
+maim -s $ss -c 1,0,1.5,0.2 -l -m 10 &&
+xclip -selection clipboard -t image/jpg -i $ss
+#notify-send -a "screenshot" "Screenshot taken"
