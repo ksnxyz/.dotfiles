@@ -1,7 +1,15 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-ss=/home/doden/Pictures/Screenshots/`date "+%F_%H%M%S.jpg"`
+# Sökväg till mappen där skärmbilderna ska sparas
+screenshot_folder="$HOME/Pictures/Screenshots"
 
-maim -s $ss -c 1,0,1.5,0.2 -l -m 10 &&
-xclip -selection clipboard -t image/jpg -i $ss
-#notify-send -a "screenshot" "Screenshot taken"
+# Filnamnet för skärmbilden baserat på datum och tid
+screenshot_file="$screenshot_folder/screenshot_$(date "+%Y%m%d_%H%M%S").png"
+
+if [[ $1 == "select" ]]; then
+    # Ta en skärmbild av ett markerat område
+    maim -s -u -l -b 5 | tee "$screenshot_file" | xclip -selection clipboard -t image/png
+else
+    # Ta en skärmbild av hela skärmen
+    maim -u | tee "$screenshot_file" | xclip -selection clipboard -t image/png
+fi
