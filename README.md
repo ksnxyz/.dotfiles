@@ -1,6 +1,6 @@
 <h1 align="center"> [Northern Solace] </h1> <br>
 <p align="center">
-  <a href="[https://gitpoint.co/](https://github.com/ksnxyz/.dotfiles/blob/main/TBA.png)">
+  <a href="https://raw.githubusercontent.com/ksnxyz/.dotfiles/main/TBA.png">
     <img alt="TBA" title="TBA" src="https://github.com/ksnxyz/.dotfiles/blob/main/TBA.png"
   </a>
 </p>
