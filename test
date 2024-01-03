@@ -3,16 +3,15 @@
 # Sökväg till mappen där skärmbilderna ska sparas
 screenshot_folder="$HOME/Pictures/Screenshots"
 
-# Skapa mappen om den inte finns
-mkdir -p "$screenshot_folder"
-
 # Filnamnet för skärmbilden baserat på datum och tid
 screenshot_file="$screenshot_folder/screenshot_$(date "+%Y%m%d_%H%M%S").png"
 
+highlight_color="00ff00"  # Ange färgkoden här, t.ex. 00ff00 för grönt
+
 if [[ $1 == "select" ]]; then
-    # Ta en skärmbild av ett markerat område
-    maim -s | tee "$screenshot_file" | xclip -selection clipboard -t image/png
+    # Ta en skärmbild av ett markerat område med genomskinlig markering
+    maim -s -u -l -b 5 -C "$highlight_color" -o 0.5 | tee "$screenshot_file" | xclip -selection clipboard -t image/png
 else
     # Ta en skärmbild av hela skärmen
-    maim | tee "$screenshot_file" | xclip -selection clipboard -t image/png
+    maim -u | tee "$screenshot_file" | xclip -selection clipboard -t image/png
 fi
