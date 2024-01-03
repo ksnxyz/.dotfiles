@@ -1,12 +1,12 @@
 [colors]
 background = #0b0d0f
 background-alt = #939193
-foreground = #939193
-primary = #F0C674
+foreground = #5f8787
+primary = #5F81A5
 secondary = #8ABEB7
 alert = #A54242
-disabled = #707880
-extra = #C7C1BE
+disabled = #5F81A5
+extra = #bd93f9
 
 [bar/bar1]
 width = 84%
@@ -49,7 +49,7 @@ enable-ipc = true
 tray-position = right
 
 ; wm-restack = generic
-; wm-restack = bspwm
+ wm-restack = bspwm
 ; wm-restack = i3
 
 ; override-redirect = true
@@ -64,7 +64,7 @@ label-active-foreground = ${colors.extra}
 
 label-occupied = %name%
 label-occupied-padding = 1
-label-occupied-foreground = ${colors.extra}
+label-occupied-foreground = ${colors.primary}
 
 label-urgent = %name%
 label-urgent-background = ${colors.alert}
@@ -93,7 +93,7 @@ label-unmounted-foreground = ${colors.disabled}
 type = internal/pulseaudio
 
 format-volume-prefix = "vol "
-format-volume-prefix-foreground = ${colors.extra}
+format-volume-prefix-foreground = ${colors.primary}
 format-volume = <label-volume>
 
 label-volume = %percentage%%
