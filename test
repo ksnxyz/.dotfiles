@@ -1,0 +1,3 @@
+# Toggle between floating and tiling mode for the focused window
+alt + t
+    bspc node -t $(bspc query -N -n focused.floating | grep -q true && echo tiled || echo floating)
