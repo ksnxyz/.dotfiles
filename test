@@ -1,15 +1,15 @@
 # Focus window to the left
 alt + {_,shift + }Left
-    bspc node -f prev.local.!hidden.window
+    bspc node -f prev
 
 # Focus window to the right
 alt + {_,shift + }Right
-    bspc node -f next.local.!hidden.window
+    bspc node -f next
 
 # Focus window above
 alt + {_,shift + }Up
-    bspc node -f north.local.!hidden.window
+    bspc node -f north
 
 # Focus window below
 alt + {_,shift + }Down
-    bspc node -f south.local.!hidden.window
+    bspc node -f south
