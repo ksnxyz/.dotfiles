@@ -20,8 +20,14 @@ alt + r
     nemo
 
 #screenshooter
-alt + Print
-    ~/Scripts/ss.sh
+alt + F12
+    $HOME/Documents/Scripts/ss.sh
+
+alt + shift + F12
+    $HOME/Documents/Scripts/ss.sh select
+
+#image viewer
+
 
 # make sxhkd reload its configuration files:
 alt + shift + r
