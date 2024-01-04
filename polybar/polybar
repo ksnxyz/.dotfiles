@@ -1,5 +1,5 @@
 [colors]
-background = #0b0d0f
+background = #000000
 background-alt = #939193
 foreground = #5f8787
 primary = #5F81A5
@@ -20,7 +20,7 @@ offset-y = 1%
 dpi = 82
 
 background = ${colors.background}
-foreground = ${colors.foreground}
+foreground = ${colors.primary}
 
 line-size = 0pt
 
