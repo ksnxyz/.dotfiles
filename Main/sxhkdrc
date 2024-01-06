@@ -1,11 +1,11 @@
-#
+f#
 # wm independent hotkeys
 #
 
 
 # terminal emulator
 alt + Return
-	kitty
+	alacritty
 
 # program launcher
 alt + d
@@ -25,9 +25,10 @@ alt + F12
 
 alt + shift + F12
     $HOME/Documents/Scripts/ss.sh select
-
-#image viewer
-
+    
+#toggle polybar
+alt + p
+    $HOME/Documents/Scripts/toggle.sh
 
 # make sxhkd reload its configuration files:
 alt + shift + r
@@ -41,7 +42,7 @@ alt + ctrl + {q,r}
 
 # close and kill
 alt + q
-	bspc node -{c,k}
+	bspc node -{c}
 
 # alternate between the tiled and monocle layout
 super + m
@@ -124,7 +125,10 @@ alt + t
 
 # Toggle between fullscreen and tiled mode for the focused window
 alt + f
-    bspc node -t fullscreen
-
-alt + f 
-    bspc node -t tiled22
+    if [ -z "$(bspc query -N -n focused.fullscreen)" ]; then \
+        bspc node focused -t fullscreen; \
+    else \
+        bspc node focused -t tiled; \
+    fi
+    
+# Audio
