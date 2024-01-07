@@ -41,7 +41,7 @@ xset -b
 unclutter --jitter 30 --ignore-scrolling --start-hidden --fork --timeout 2
 
 #Monitors
-xrandr --output DP-4 --primary --mode 2560x1440 --rotate normal --output DP-3 --mode 1920x1080 --rotate normal --right-of DP-4 
+xrandr --output DP-4 --primary --mode 2560x1440 --rotate normal --rate 144 --output DP-3 --mode 1920x1080 --rotate normal --rate 60 --right-of DP-4 
 
 #cursor options
 xsetroot -cursor_name left_ptr
