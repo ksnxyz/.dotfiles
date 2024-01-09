@@ -1,5 +1,8 @@
 /* [KSN Version] */ 
 
+/* import */
+
+
 /* Keybinds
 Ctrl + T = New Tab
 Ctrl + N = New Window
@@ -8,6 +11,8 @@ Ctrl + W = Close Tab
 Ctrl + press = Select Tabs
 Ctrl + R = Refresh
 Ctrl + F = Search
+Settings = "about:preferences" in URL bar
+Rmove alt menu function = ui.key.menuAccessKey = 18 in about:config
 
 /* Define root variables for colors */
 :root {
@@ -180,13 +185,12 @@ html, body {
   overflow: hidden !important;
 }
 
-/* Hide identity box and extensions button */
-#identity-box,
-#unified-extensions-button {
+/* Hide identity box */
+#identity-box {
   display: none !important;
 }
 
-/* Hide Extensions and List All Tabs button */
+/* Hide List All Tabs button */
 #TabsToolbar #customization-target,
 #alltabs-button {
   display: none !important;
@@ -207,3 +211,27 @@ html, body {
   border-bottom: 3px solid rgb(189, 147, 249) !important;
 }
 
+/* Remove transparent background on selected tab */
+.tabbrowser-tab[visuallyselected] .tab-background {
+  background: transparent !important;
+  visibility: visible !important;
+}
+
+.tabbrowser-tab:hover .tab-background {
+  background: transparent !important;
+}
+
+/* Remove arrow in adress bar */
+#urlbar-go-button {
+	display: none;
+}
+
+/* Fade effect on extensions */
+#nav-bar #unified-extensions-button {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#nav-bar #unified-extensions-button:hover {
+  opacity: 1 !important;
+}
