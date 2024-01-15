@@ -294,3 +294,9 @@
   {
     opacity: 1 !important;
   }
+
+:root {
+  scrollbar-width: none !important;
+}
+
+ytd-app { overflow: hidden; }
