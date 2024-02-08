@@ -1,0 +1,104 @@
+*/
+
+:root {
+  scrollbar-width: none !important;
+}
+
+@-moz-document url(about:privatebrowsing) {
+  :root {
+    scrollbar-width: none !important;
+  }
+}
+
+/* Private Window */
+
+html.private {background-color: rgb(0, 0, 0) !important;}
+
+/* Remove info */
+.info {
+  display: none !important;
+}
+
+#search-handoff-button {
+  display: none !important;
+}
+
+/* Remove promo under search */
+
+.promo.below-search {
+  display: none !important;
+}
+
+/*remove duckduckgo share feedback */
+
+.btn.feedback-btn {
+  display: none !important;
+}
+
+/*remove duckduckgo help spread */
+
+.header__clickable {
+  display: none !important;
+}
+
+/* remvove settings in corner next to scrollbar */
+
+a.header__button--menu.js-side-menu-open {
+  display: none !important;
+}
+
+/* remove scrollbar */
+
+* {
+  scrollbar-width: none;
+}
+
+/* remove share feedback */
+
+a.feedback-prompt__link {
+  display: none !important;
+}
+
+/*remove new tab personalize button */
+
+button.icon-settings {
+  display: none !important;
+}
+
+/* remove white line on duckduckgo searches */ 
+
+
+
+/* remove search button */
+
+#search_button {
+    display: none !important;
+}
+
+/* remove clear button */
+
+#search_form_input_clear {
+  display: none !important;
+}
+
+/* custom image for new tab */
+
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
+  .click-target-container *,
+  .top-sites-list * {
+    color: #fff !important;
+    text-shadow: 2px 2px 2px #222 !important;
+  }
+
+  body::before {
+    content: "";
+    z-index: -1;
+    position: fixed;
+    bottom: 0; /* Justerad för att placera i det nedre hörnet */
+    right: 0; /* Justerad för att placera i det nedre hörnet */
+    background: rgb(0, 0, 0) no-repeat url(img/garfield.png) center;
+    background-size: cover;
+    width: 500px; /* Anpassa bredden efter behov */
+    height: 500px; /* Anpassa höjden efter behov */
+  }
+}
