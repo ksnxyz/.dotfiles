@@ -100,3 +100,10 @@ button.icon-settings {
 }
 
 /* Custom image for DuckDuckGo */
+
+
+/* remove survey link */
+
+a.text_promo--link.header--text_promo--link.js-text-promo-link {
+  display: none !important;
+}
